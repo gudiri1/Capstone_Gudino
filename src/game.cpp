@@ -1,6 +1,8 @@
 #include "game.h"
 #include <iostream>
 #include "SDL.h"
+#include <thread>
+#include <future>
 
 Game::Game(std::size_t grid_width, std::size_t grid_height)
     : snake(grid_width, grid_height),
@@ -19,26 +21,48 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   int frame_count = 0;
   bool running = true;
 
+  bool DirFlag = true;
+
+  //renderer.Renderb();
+
   while (running) {
     frame_start = SDL_GetTicks();
 
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake);
-    Update();
-    renderer.Render(snake, food);
+
+    std::thread t1(&Game::Update, this );
+
+    std::thread t2(&Mason::Update, &mason, std::ref(DirFlag));
+
+    
+
+    //Update();
+    //mason.Update();
+
+    t1.join();
+    t2.join();
+    
+    renderer.Render(snake, food, mason);
+
+    //renderer.Renderb();
 
     frame_end = SDL_GetTicks();
 
     // Keep track of how long each loop through the input/update/render cycle
     // takes.
-    frame_count++;
+   frame_count++;
     frame_duration = frame_end - frame_start;
 
     // After every second, update the window title.
     if (frame_end - title_timestamp >= 1000) {
+      
       renderer.UpdateWindowTitle(score, frame_count);
       frame_count = 0;
       title_timestamp = frame_end;
+
+      //if (mason.body1_x >= 100) DirFlag = false;
+      
     }
 
     // If the time for this frame is too small (i.e. frame_duration is
@@ -70,6 +94,8 @@ void Game::Update() {
 
   snake.Update();
 
+  //mason.Update();
+
   int new_x = static_cast<int>(snake.head_x);
   int new_y = static_cast<int>(snake.head_y);
 
@@ -82,6 +108,9 @@ void Game::Update() {
     snake.speed += 0.02;
   }
 }
+
+
+
 
 int Game::GetScore() const { return score; }
 int Game::GetSize() const { return snake.size; }

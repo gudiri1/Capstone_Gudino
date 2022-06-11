@@ -123,6 +123,33 @@ SnakeGame/fast:
 	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/build
 .PHONY : SnakeGame/fast
 
+src/block.o: src/block.cpp.o
+
+.PHONY : src/block.o
+
+# target to build an object file
+src/block.cpp.o:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/block.cpp.o
+.PHONY : src/block.cpp.o
+
+src/block.i: src/block.cpp.i
+
+.PHONY : src/block.i
+
+# target to preprocess a source file
+src/block.cpp.i:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/block.cpp.i
+.PHONY : src/block.cpp.i
+
+src/block.s: src/block.cpp.s
+
+.PHONY : src/block.s
+
+# target to generate assembly for a file
+src/block.cpp.s:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/block.cpp.s
+.PHONY : src/block.cpp.s
+
 src/controller.o: src/controller.cpp.o
 
 .PHONY : src/controller.o
@@ -204,6 +231,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/mason.o: src/mason.cpp.o
+
+.PHONY : src/mason.o
+
+# target to build an object file
+src/mason.cpp.o:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mason.cpp.o
+.PHONY : src/mason.cpp.o
+
+src/mason.i: src/mason.cpp.i
+
+.PHONY : src/mason.i
+
+# target to preprocess a source file
+src/mason.cpp.i:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mason.cpp.i
+.PHONY : src/mason.cpp.i
+
+src/mason.s: src/mason.cpp.s
+
+.PHONY : src/mason.s
+
+# target to generate assembly for a file
+src/mason.cpp.s:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mason.cpp.s
+.PHONY : src/mason.cpp.s
+
 src/renderer.o: src/renderer.cpp.o
 
 .PHONY : src/renderer.o
@@ -267,6 +321,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... SnakeGame"
 	@echo "... edit_cache"
+	@echo "... src/block.o"
+	@echo "... src/block.i"
+	@echo "... src/block.s"
 	@echo "... src/controller.o"
 	@echo "... src/controller.i"
 	@echo "... src/controller.s"
@@ -276,6 +333,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/mason.o"
+	@echo "... src/mason.i"
+	@echo "... src/mason.s"
 	@echo "... src/renderer.o"
 	@echo "... src/renderer.i"
 	@echo "... src/renderer.s"
