@@ -29,13 +29,14 @@ int main() {
   Game game(kGridWidth, kGridHeight);
 
   game.Run(controller, renderer, kMsPerFrame);
-  std::thread t(threadFunction, std::ref(renderer));
+  //std::thread t(threadFunction, std::ref(renderer));
 
-  t.join();
+  //t.join();
   std::cout << "Game has terminated successfully!\n";
   std::cout << "Score: " << game.GetScore() << "\n";
   std::cout << "Size: " << game.GetSize() << "\n";
 
+  //t.join(); 
 
   return 0;
 }

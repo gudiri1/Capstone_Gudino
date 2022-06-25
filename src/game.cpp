@@ -40,10 +40,13 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     //Update();
     //mason.Update();
 
-    t1.join();
-    t2.join();
+    // t1.join();
+    // t2.join();
     
     renderer.Render(snake, food, mason);
+
+    t1.join();
+    t2.join();
 
     //renderer.Renderb();
 

@@ -8,6 +8,16 @@
 #include "snake.h"
 #include "mason.h"
 
+class GameObject
+{
+public:
+
+protected:
+
+private:
+
+};
+
 class Game {
  public:
   Game(std::size_t grid_width, std::size_t grid_height);
