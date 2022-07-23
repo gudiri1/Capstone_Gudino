@@ -123,32 +123,32 @@ SnakeGame/fast:
 	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/build
 .PHONY : SnakeGame/fast
 
-src/block.o: src/block.cpp.o
+src/GameObject.o: src/GameObject.cpp.o
 
-.PHONY : src/block.o
+.PHONY : src/GameObject.o
 
 # target to build an object file
-src/block.cpp.o:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/block.cpp.o
-.PHONY : src/block.cpp.o
+src/GameObject.cpp.o:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/GameObject.cpp.o
+.PHONY : src/GameObject.cpp.o
 
-src/block.i: src/block.cpp.i
+src/GameObject.i: src/GameObject.cpp.i
 
-.PHONY : src/block.i
+.PHONY : src/GameObject.i
 
 # target to preprocess a source file
-src/block.cpp.i:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/block.cpp.i
-.PHONY : src/block.cpp.i
+src/GameObject.cpp.i:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/GameObject.cpp.i
+.PHONY : src/GameObject.cpp.i
 
-src/block.s: src/block.cpp.s
+src/GameObject.s: src/GameObject.cpp.s
 
-.PHONY : src/block.s
+.PHONY : src/GameObject.s
 
 # target to generate assembly for a file
-src/block.cpp.s:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/block.cpp.s
-.PHONY : src/block.cpp.s
+src/GameObject.cpp.s:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/GameObject.cpp.s
+.PHONY : src/GameObject.cpp.s
 
 src/controller.o: src/controller.cpp.o
 
@@ -258,6 +258,33 @@ src/mason.cpp.s:
 	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mason.cpp.s
 .PHONY : src/mason.cpp.s
 
+src/mortar.o: src/mortar.cpp.o
+
+.PHONY : src/mortar.o
+
+# target to build an object file
+src/mortar.cpp.o:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mortar.cpp.o
+.PHONY : src/mortar.cpp.o
+
+src/mortar.i: src/mortar.cpp.i
+
+.PHONY : src/mortar.i
+
+# target to preprocess a source file
+src/mortar.cpp.i:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mortar.cpp.i
+.PHONY : src/mortar.cpp.i
+
+src/mortar.s: src/mortar.cpp.s
+
+.PHONY : src/mortar.s
+
+# target to generate assembly for a file
+src/mortar.cpp.s:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mortar.cpp.s
+.PHONY : src/mortar.cpp.s
+
 src/renderer.o: src/renderer.cpp.o
 
 .PHONY : src/renderer.o
@@ -312,6 +339,33 @@ src/snake.cpp.s:
 	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/snake.cpp.s
 .PHONY : src/snake.cpp.s
 
+src/wall.o: src/wall.cpp.o
+
+.PHONY : src/wall.o
+
+# target to build an object file
+src/wall.cpp.o:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/wall.cpp.o
+.PHONY : src/wall.cpp.o
+
+src/wall.i: src/wall.cpp.i
+
+.PHONY : src/wall.i
+
+# target to preprocess a source file
+src/wall.cpp.i:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/wall.cpp.i
+.PHONY : src/wall.cpp.i
+
+src/wall.s: src/wall.cpp.s
+
+.PHONY : src/wall.s
+
+# target to generate assembly for a file
+src/wall.cpp.s:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/wall.cpp.s
+.PHONY : src/wall.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -321,9 +375,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... SnakeGame"
 	@echo "... edit_cache"
-	@echo "... src/block.o"
-	@echo "... src/block.i"
-	@echo "... src/block.s"
+	@echo "... src/GameObject.o"
+	@echo "... src/GameObject.i"
+	@echo "... src/GameObject.s"
 	@echo "... src/controller.o"
 	@echo "... src/controller.i"
 	@echo "... src/controller.s"
@@ -336,12 +390,18 @@ help:
 	@echo "... src/mason.o"
 	@echo "... src/mason.i"
 	@echo "... src/mason.s"
+	@echo "... src/mortar.o"
+	@echo "... src/mortar.i"
+	@echo "... src/mortar.s"
 	@echo "... src/renderer.o"
 	@echo "... src/renderer.i"
 	@echo "... src/renderer.s"
 	@echo "... src/snake.o"
 	@echo "... src/snake.i"
 	@echo "... src/snake.s"
+	@echo "... src/wall.o"
+	@echo "... src/wall.i"
+	@echo "... src/wall.s"
 .PHONY : help
 
 

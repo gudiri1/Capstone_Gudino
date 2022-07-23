@@ -15,11 +15,10 @@ class Renderer {
   void Render(Snake const snake, SDL_Point const &food, Mason const mason);
   void UpdateWindowTitle(int score, int fps);
 
-  void Renderb();
-
+  
  private:
-  SDL_Window *sdl_window;
-  SDL_Renderer *sdl_renderer;
+  SDL_Window *sdl_window;          // holds all info about the window 
+  SDL_Renderer *sdl_renderer;      // tied to SdlWindow. Handles the rendering
 
   const std::size_t screen_width;
   const std::size_t screen_height;

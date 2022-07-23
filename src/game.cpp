@@ -4,6 +4,7 @@
 #include <thread>
 #include <future>
 
+
 Game::Game(std::size_t grid_width, std::size_t grid_height)
     : snake(grid_width, grid_height),
       engine(dev()),
@@ -21,40 +22,34 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   int frame_count = 0;
   bool running = true;
 
-  bool DirFlag = true;
+  bool DirFlag = false;
 
-  //renderer.Renderb();
+  //mason.SetState(moveToLeft);
 
   while (running) {
     frame_start = SDL_GetTicks();
 
     // Input, Update, Render - the main game loop.
-    controller.HandleInput(running, snake);
+    controller.HandleInput(running, snake, mason);
 
     std::thread t1(&Game::Update, this );
 
     std::thread t2(&Mason::Update, &mason, std::ref(DirFlag));
 
     
-
-    //Update();
-    //mason.Update();
-
-    // t1.join();
-    // t2.join();
     
     renderer.Render(snake, food, mason);
 
+    
+
     t1.join();
     t2.join();
-
-    //renderer.Renderb();
 
     frame_end = SDL_GetTicks();
 
     // Keep track of how long each loop through the input/update/render cycle
     // takes.
-   frame_count++;
+    frame_count++;
     frame_duration = frame_end - frame_start;
 
     // After every second, update the window title.
@@ -96,8 +91,6 @@ void Game::Update() {
   if (!snake.alive) return;
 
   snake.Update();
-
-  //mason.Update();
 
   int new_x = static_cast<int>(snake.head_x);
   int new_y = static_cast<int>(snake.head_y);

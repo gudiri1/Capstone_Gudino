@@ -40,21 +40,6 @@ Renderer::~Renderer() {
 }
 
 
-void Renderer::Renderb(){
-   SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
-  SDL_Rect rectangle;
-
-rectangle.x = 0;
-rectangle.y = 0;
-rectangle.w = 50;
-rectangle.h = 50;
-SDL_RenderFillRect(sdl_renderer, &rectangle);
-
-// Update Screen
-  SDL_RenderPresent(sdl_renderer);
-
-}
-
 void Renderer::Render(Snake const snake, SDL_Point const &food, Mason const mason) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
@@ -89,22 +74,16 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, Mason const maso
   SDL_RenderFillRect(sdl_renderer, &block);
 
   // Render mason
-  SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
-  // block.x = static_cast<int>(mason.body1_x) * block.w;
-  // block.y = static_cast<int>(mason.body1_y) * block.h;
-  block.x = static_cast<int>(mason.body1_x) ;
-  block.y = static_cast<int>(mason.body1_y) ;
+  SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x00, 0xCC, 0xFF);
+  block.x = mason.GetPos_x();
+  block.y = mason.GetPos_y();
   SDL_RenderFillRect(sdl_renderer, &block);
 
-  // SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
-  // SDL_Rect rectangle;
-  // rectangle.x = 10;
-  // rectangle.y = 10;
-  // rectangle.w = 50;
-  // rectangle.h = 50;
-  // SDL_RenderFillRect(sdl_renderer, &rectangle);
-
-
+  // Render FlyingBlock
+  SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x00, 0xCC, 0xFF);
+  block.x = mason.fblock.GetPos_x();
+  block.y = mason.fblock.GetPos_y();
+  SDL_RenderFillRect(sdl_renderer, &block);
 
   // Update Screen
   SDL_RenderPresent(sdl_renderer);

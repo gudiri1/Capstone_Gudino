@@ -2,22 +2,30 @@
 #include <cmath>
 #include <iostream>
 
-void Mason::Update(bool &DirFlag) {
+void Mason::Update(bool &DirFlag) 
+{
 
-  // if (DirFlag == true)  
-  // {
-  //   body1_x += 1;
-  //   //body2_x += 1;
-  //   //DirFlag = 0;
-  // }
-  // else
-  // {
-  //   body1_x -= 1;
-  //   //body2_x -= 1;
-  //   //DirFlag = 0;
-  // }
-  
-  // if (body1_x >= 150) DirFlag = false;
-  // //if (body1_x == 150){ DirFlag == 0;}
+  switch (this->state) {
+    case GameObject::State::moveToLeft :
+      _pos_x -=20;
+       state = GameObject::State::idle;
+      break;
 
+    case GameObject::State::moveToRight :
+      _pos_x +=20;
+       state = GameObject::State::idle;
+      break;
+
+    case GameObject::State::fire:
+       DirFlag = true;
+       state = GameObject::State::idle;
+      break;
+  }
+
+}
+
+void FlyingBlock::Update(Mason &mason)
+{
+    _pos_x = mason.GetPos_x();
+    _pos_y = mason.GetPos_y() - 20;
 }

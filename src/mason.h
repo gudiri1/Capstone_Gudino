@@ -1,29 +1,53 @@
 #ifndef MASON_H
 #define MASON_H
 
-class Mason
+#include "GameObject.h"
+
+class Mason;
+
+class FlyingBlock : public GameObject
 {
 public:
 
-  Mason() {
-    body1_x = 0;
-    body1_y = 550;
+  FlyingBlock() {
+    _pos_x = 15 * 20; 
+    _pos_y = 29 * 20;
 
-    //body2_x = 100;
-    //body2_y = 600;
   }    
 
-void Update(bool &DirFlag);
+  ~FlyingBlock(){};
 
-float body1_x;
-float body1_y;
 
-float body2_x;
-float body2_y;
+  void Update(Mason &mason);
 
 private:
 
 
 };
+
+
+class Mason : public GameObject
+{
+public:
+
+  Mason() {
+    _pos_x = 15 * 20; 
+    _pos_y = 29 * 20;
+
+ }    
+
+~Mason(){};
+
+
+void Update(bool &DirFlag);
+
+FlyingBlock fblock;
+
+private:
+
+
+};
+
+
 
 #endif

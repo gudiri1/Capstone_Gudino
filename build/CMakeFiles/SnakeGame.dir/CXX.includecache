@@ -6,37 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/workspace/CppND-Capstone-Snake-Game/src/controller.h
-snake.h
-/home/workspace/CppND-Capstone-Snake-Game/src/snake.h
+/home/workspace/CppND-Capstone-Snake-Game/src/GameObject.h
 
-/home/workspace/CppND-Capstone-Snake-Game/src/game.cpp
-game.h
-/home/workspace/CppND-Capstone-Snake-Game/src/game.h
-iostream
--
-SDL.h
-/home/workspace/CppND-Capstone-Snake-Game/src/SDL.h
-thread
--
-future
--
+/home/workspace/CppND-Capstone-Snake-Game/src/mason.h
+GameObject.h
+/home/workspace/CppND-Capstone-Snake-Game/src/GameObject.h
 
-/home/workspace/CppND-Capstone-Snake-Game/src/game.h
-random
--
-SDL.h
-/home/workspace/CppND-Capstone-Snake-Game/src/SDL.h
-controller.h
-/home/workspace/CppND-Capstone-Snake-Game/src/controller.h
+/home/workspace/CppND-Capstone-Snake-Game/src/renderer.cpp
 renderer.h
 /home/workspace/CppND-Capstone-Snake-Game/src/renderer.h
-snake.h
-/home/workspace/CppND-Capstone-Snake-Game/src/snake.h
-mason.h
-/home/workspace/CppND-Capstone-Snake-Game/src/mason.h
-
-/home/workspace/CppND-Capstone-Snake-Game/src/mason.h
+iostream
+-
+string
+-
 
 /home/workspace/CppND-Capstone-Snake-Game/src/renderer.h
 vector

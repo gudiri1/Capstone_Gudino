@@ -6,17 +6,11 @@
 #include "controller.h"
 #include "renderer.h"
 #include "snake.h"
-#include "mason.h"
+// #include "mason.h"
+#include <memory>
+//#include "wall.h"
 
-class GameObject
-{
-public:
 
-protected:
-
-private:
-
-};
 
 class Game {
  public:
@@ -26,11 +20,18 @@ class Game {
   int GetScore() const;
   int GetSize() const;
 
+  
+
  private:
   Snake snake;
   SDL_Point food;
 
   Mason mason;
+
+  //FlyingBlock fblock;
+
+    
+  //std::shared_ptr<Wall> wall = std::make_shared<Wall>();;
 
   SDL_Point stone;
 
