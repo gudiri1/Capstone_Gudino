@@ -3,15 +3,26 @@
 
 #include "GameObject.h"
 
+#include <vector>
+#include "SDL.h"
+
+
+struct Brick : public GameObject
+{
+    int color;
+    bool presence;
+};
 
 class Wall : public GameObject
 {
 
 public:
 
-//Game game1(32,32);
-    GameObject trick;
-    Mason mason;
+std::vector<SDL_Point> bricks;
+
+void Update();
+
+std::vector<bool> presence = {1, 0, 1, 0, 1, 0, 1, 0, 1, 0};
 
 private:
 

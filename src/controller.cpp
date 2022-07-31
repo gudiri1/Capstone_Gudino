@@ -47,7 +47,12 @@ void Controller::HandleInput(bool &running, Snake &snake, Mason &mason) const {
           break;
 
         case SDLK_KP_8:
+          //mason.fblock.initPos_x = mason.GetPos_x();
+          //mason.fblock.initPos_y = mason.GetPos_y();
+          mason.fblock.SetPos_x(mason.GetPos_x());
+          mason.fblock.SetPos_y(mason.GetPos_y());
           mason.SetState(GameObject::State::fire); 
+          //std::cout << mason.GetPos_x() << " " << mason.GetPos_y() << std::endl;
           break;
         
       }

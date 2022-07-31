@@ -2,6 +2,7 @@
 #include <cmath>
 #include <iostream>
 
+
 void Mason::Update(bool &DirFlag) 
 {
 
@@ -22,10 +23,22 @@ void Mason::Update(bool &DirFlag)
       break;
   }
 
+  //std::future<bool> ftr = std::async(&FlyingBlock::PropelBlock, this->fblock);
+  //this->blockFlies = ftr.get();
+
 }
 
-void FlyingBlock::Update(Mason &mason)
+bool FlyingBlock::PropelBlock()
 {
-    _pos_x = mason.GetPos_x();
-    _pos_y = mason.GetPos_y() - 20;
+    
+    //_pos_x = initPos_x ;
+    //_pos_y = initPos_y - 20;
+
+    _pos_y = _pos_y - 20;
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(50));
+
+    
+
+    return 1;
 }

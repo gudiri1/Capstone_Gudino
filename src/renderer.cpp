@@ -80,10 +80,16 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, Mason const maso
   SDL_RenderFillRect(sdl_renderer, &block);
 
   // Render FlyingBlock
+  if (mason.blockFlies == 0){
   SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x00, 0xCC, 0xFF);
   block.x = mason.fblock.GetPos_x();
   block.y = mason.fblock.GetPos_y();
+
+  //std::cout << mason.fblock.GetPos_x() << " " << mason.fblock.GetPos_y() << std::endl;
   SDL_RenderFillRect(sdl_renderer, &block);
+  }
+
+  // Render Wall
 
   // Update Screen
   SDL_RenderPresent(sdl_renderer);

@@ -23,7 +23,9 @@ int main() {
   Controller controller;
   Game game(kGridWidth, kGridHeight);
 
-  
+  FlyingBlock fBlock1;
+
+  fBlock1.~FlyingBlock();
 
   game.Run(controller, renderer, kMsPerFrame);
   //std::thread t(threadFunction, std::ref(renderer));

@@ -24,6 +24,8 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 
   bool DirFlag = false;
 
+  mason.blockFlies = 0;
+
   //mason.SetState(moveToLeft);
 
   while (running) {
@@ -32,11 +34,14 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake, mason);
 
-    std::thread t1(&Game::Update, this );
+    std::thread t1(&Game::Update, this);
 
     std::thread t2(&Mason::Update, &mason, std::ref(DirFlag));
 
-    
+    // std::future<bool> ftr = std::async(&FlyingBlock::PropelBlock, &mason.fblock);
+    // mason.blockFlies = ftr.get();
+
+    std::thread t3(&FlyingBlock::PropelBlock, &mason.fblock);
     
     renderer.Render(snake, food, mason);
 
@@ -44,6 +49,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 
     t1.join();
     t2.join();
+    t3.join();
 
     frame_end = SDL_GetTicks();
 

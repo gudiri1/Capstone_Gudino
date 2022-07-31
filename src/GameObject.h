@@ -6,7 +6,7 @@ class GameObject
 {
 public:
 
-  enum class State { nonVisible, idle, moveToRight, moveToLeft, fire};
+  enum class State { nonVisible, idle, moveToRight, moveToLeft, fire, moving};
 
   GameObject(){};
   ~GameObject(){};
