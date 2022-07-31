@@ -8,7 +8,7 @@
 #include "snake.h"
 // #include "mason.h"
 #include <memory>
-//#include "wall.h"
+#include "wall.h"
 
 
 
@@ -28,7 +28,7 @@ class Game {
 
   Mason mason;
 
-  
+  Wall wall;
 
   //FlyingBlock fblock;
 

@@ -5,6 +5,7 @@
 #include "SDL.h"
 #include "snake.h"
 #include "mason.h"
+#include "wall.h"
 
 class Renderer {
  public:
@@ -12,7 +13,7 @@ class Renderer {
            const std::size_t grid_width, const std::size_t grid_height);
   ~Renderer();
 
-  void Render(Snake const snake, SDL_Point const &food, Mason const mason);
+  void Render(Snake const snake, SDL_Point const &food, Mason const mason, Wall wall);
   void UpdateWindowTitle(int score, int fps);
 
   

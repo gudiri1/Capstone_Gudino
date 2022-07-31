@@ -25,7 +25,7 @@ public:
   int initPos_y;
 
 
-  bool PropelBlock();
+  bool PropelBlock(Mason &mason);
 
 private:
 

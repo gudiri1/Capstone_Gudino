@@ -49,6 +49,7 @@ void Controller::HandleInput(bool &running, Snake &snake, Mason &mason) const {
         case SDLK_KP_8:
           //mason.fblock.initPos_x = mason.GetPos_x();
           //mason.fblock.initPos_y = mason.GetPos_y();
+          mason.blockFlies = 1;
           mason.fblock.SetPos_x(mason.GetPos_x());
           mason.fblock.SetPos_y(mason.GetPos_y());
           mason.SetState(GameObject::State::fire); 

@@ -40,7 +40,7 @@ Renderer::~Renderer() {
 }
 
 
-void Renderer::Render(Snake const snake, SDL_Point const &food, Mason const mason) {
+void Renderer::Render(Snake const snake, SDL_Point const &food, Mason const mason, Wall wall) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
@@ -80,7 +80,7 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, Mason const maso
   SDL_RenderFillRect(sdl_renderer, &block);
 
   // Render FlyingBlock
-  if (mason.blockFlies == 0){
+  if (mason.blockFlies == 1){
   SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x00, 0xCC, 0xFF);
   block.x = mason.fblock.GetPos_x();
   block.y = mason.fblock.GetPos_y();
@@ -90,6 +90,19 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, Mason const maso
   }
 
   // Render Wall
+  SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x00, 0xCC, 0xFF);
+  int x_pos = 6 * 20;
+  int y_pos = 15 * 20;
+  for (auto point : wall.presence) {
+    if (point == 1) {
+      block.x = x_pos;
+      block.y = y_pos;
+      SDL_RenderFillRect(sdl_renderer, &block);
+    }
+  x_pos += 20;
+      
+  }
+  
 
   // Update Screen
   SDL_RenderPresent(sdl_renderer);

@@ -22,7 +22,7 @@ std::vector<SDL_Point> bricks;
 
 void Update();
 
-std::vector<bool> presence = {1, 0, 1, 0, 1, 0, 1, 0, 1, 0};
+std::vector<bool> presence = {1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0 ,1};
 
 private:
 
