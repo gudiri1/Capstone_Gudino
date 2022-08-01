@@ -1,7 +1,9 @@
 #include "mason.h"
+#include "wall.h"
 #include <cmath>
 #include <iostream>
 
+#define MAX_NUMBER_OF_BRICKS    52
 
 void Mason::Update(bool &DirFlag) 
 {
@@ -28,18 +30,34 @@ void Mason::Update(bool &DirFlag)
 
 }
 
-bool FlyingBlock::PropelBlock(Mason &mason)
+bool FlyingBlock::PropelBlock(Mason &mason, Wall &wall)
 {
     
   //_pos_x = initPos_x ;
   //_pos_y = initPos_y - 20;
+  int totalPresence;
+
+  for(std::vector<bool>::iterator i = wall.presence.begin(); i != wall.presence.end(); ++i)
+    totalPresence += *i;
+
+  //std::cout << "propbel" << totalPresence << std::endl;
+
+  if (totalPresence == MAX_NUMBER_OF_BRICKS)
+    wall.SetNewWall();
+
+
 
   _pos_y = _pos_y - 20;
 
-  if (_pos_y == 300)
-  mason.blockFlies = 0;
+  int index = (_pos_x - 120/*initial wall point*/)/20; 
 
-  std::this_thread::sleep_for(std::chrono::milliseconds(500));
+  if (_pos_y == 300){
+    mason.blockFlies = 0;
+    wall.presence[index] = 1;
+  }
+  
+
+  std::this_thread::sleep_for(std::chrono::milliseconds(50));
 
   //std::cout << _pos_y << std::endl;  
 

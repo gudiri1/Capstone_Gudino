@@ -3,6 +3,7 @@
 
 #include "SDL.h"
 #include "GameObject.h"
+#include "wall.h"
 #include <future>
 
 class Mason;
@@ -25,7 +26,7 @@ public:
   int initPos_y;
 
 
-  bool PropelBlock(Mason &mason);
+  bool PropelBlock(Mason &mason, Wall &wall);
 
 private:
 

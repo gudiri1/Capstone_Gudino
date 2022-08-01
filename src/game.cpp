@@ -41,7 +41,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // std::future<bool> ftr = std::async(&FlyingBlock::PropelBlock, &mason.fblock);
     // mason.blockFlies = ftr.get();
 
-    std::thread t3(&FlyingBlock::PropelBlock, &mason.fblock, std::ref(mason));
+    std::thread t3(&FlyingBlock::PropelBlock, &mason.fblock, std::ref(mason), std::ref(wall));
     
     renderer.Render(snake, food, mason, wall);
 

@@ -18,11 +18,17 @@ class Wall : public GameObject
 
 public:
 
+Wall(){
+    this->SetNewWall();
+}
+
 std::vector<SDL_Point> bricks;
 
 void Update();
 
-std::vector<bool> presence = {1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0 ,1};
+void SetNewWall();
+
+std::vector<bool> presence = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0};
 
 private:
 
