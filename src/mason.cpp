@@ -3,7 +3,7 @@
 #include <cmath>
 #include <iostream>
 
-#define MAX_NUMBER_OF_BRICKS    52
+#define MAX_NUMBER_OF_BRICKS    20
 
 void Mason::Update(bool &DirFlag) 
 {
@@ -32,9 +32,7 @@ void Mason::Update(bool &DirFlag)
 
 bool FlyingBlock::PropelBlock(Mason &mason, Wall &wall)
 {
-    
-  //_pos_x = initPos_x ;
-  //_pos_y = initPos_y - 20;
+
   int totalPresence;
 
   for(std::vector<bool>::iterator i = wall.presence.begin(); i != wall.presence.end(); ++i)
@@ -45,8 +43,6 @@ bool FlyingBlock::PropelBlock(Mason &mason, Wall &wall)
   if (totalPresence == MAX_NUMBER_OF_BRICKS)
     wall.SetNewWall();
 
-
-
   _pos_y = _pos_y - 20;
 
   int index = (_pos_x - 120/*initial wall point*/)/20; 
@@ -56,10 +52,11 @@ bool FlyingBlock::PropelBlock(Mason &mason, Wall &wall)
     wall.presence[index] = 1;
   }
   
-
   std::this_thread::sleep_for(std::chrono::milliseconds(50));
 
-  //std::cout << _pos_y << std::endl;  
+  std::cout << totalPresence << std::endl;
+
+  totalPresence = 0;
 
   return 1;
 }

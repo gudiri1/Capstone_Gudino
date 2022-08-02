@@ -5,8 +5,6 @@
 #include "SDL.h"
 #include "controller.h"
 #include "renderer.h"
-#include "snake.h"
-// #include "mason.h"
 #include <memory>
 #include "wall.h"
 
@@ -23,19 +21,10 @@ class Game {
   
 
  private:
-  Snake snake;
-  SDL_Point food;
 
   Mason mason;
 
   Wall wall;
-
-  //FlyingBlock fblock;
-
-    
-  //std::shared_ptr<Wall> wall = std::make_shared<Wall>();;
-
-  SDL_Point stone;
 
   std::random_device dev;
   std::mt19937 engine;
@@ -44,8 +33,6 @@ class Game {
 
   int score{0};
 
-  void PlaceFood();
-  void Update();
 };
 
 #endif
