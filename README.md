@@ -7,7 +7,10 @@ A mason has a build a wall by "shooting" flying blocks, which come to build a br
 and a new randomly incomplete layer shows up to keep the mason busy. Every complete layer increases the score.
 
 
-
+You can move the mason laterally using the numPad:
+4 and 6 respectively for left and right.
+When pressing 8 a block will fly and go to the
+Layer.
 
 
 
