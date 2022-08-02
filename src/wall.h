@@ -4,6 +4,7 @@
 #include "GameObject.h"
 #include <vector>
 #include "SDL.h"
+#include <mutex>
 
 class Wall : public GameObject
 {
@@ -17,7 +18,11 @@ public:
 
     std::vector<bool> presence = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0};
 
+    //std::mutex _mutex;
+
 private:
+
+
  
 };
 
