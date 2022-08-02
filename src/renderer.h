@@ -12,7 +12,7 @@ class Renderer {
            const std::size_t grid_width, const std::size_t grid_height);
   ~Renderer();
 
-  void Render(Mason const mason, Wall wall);
+  void Render(Mason mason, Wall wall);
   void UpdateWindowTitle(int score, int fps);
 
   

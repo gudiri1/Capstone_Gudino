@@ -40,7 +40,7 @@ Renderer::~Renderer() {
 }
 
 
-void Renderer::Render(Mason const mason, Wall wall) {
+void Renderer::Render(Mason mason, Wall wall) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;

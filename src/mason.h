@@ -29,6 +29,7 @@ public:
 
 private:
 
+ 
 
 };
 
@@ -43,7 +44,7 @@ public:
 
   }    
 
-  ~Mason(){};
+  //~Mason(){};
 
   bool blockFlies;
 
