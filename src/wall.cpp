@@ -12,6 +12,7 @@ void Wall::SetNewWall(){
 
   presence = {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1}; // setting the extremes
 
+  std::unique_lock<std::mutex> uLock(*_mutex);
   // filling the wall up" with random values
   for(int n=1; n<19; ++n){
   this->presence.at(n)=distr(gen);
