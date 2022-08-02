@@ -25,6 +25,8 @@ public:
 
   bool PropelBlock(Mason &mason, Wall &wall);
 
+  int countScore{0};
+
 private:
 
 

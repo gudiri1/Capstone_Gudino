@@ -3,12 +3,21 @@
 #include "SDL.h"
 #include <thread>
 #include <future>
+#include <algorithm>
 
 
 Game::Game(std::size_t grid_width, std::size_t grid_height)
     : engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)) {
+}
+
+bool Game::ReadWall(std::vector<bool> v){
+  return (std::count(v.begin(), v.end(), 0));
+}
+
+void Game::SetScore(int s){
+  score = s;
 }
 
 void Game::Run(Controller const &controller, Renderer &renderer,
@@ -32,10 +41,17 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 
     std::thread t3(&FlyingBlock::PropelBlock, &mason.fblock, std::ref(mason), std::ref(wall));
     
+    bool a = ReadWall(wall.presence);
+    
     renderer.Render(mason, wall);
     
+
     t2.join();
     t3.join();
+
+    SetScore(mason.fblock.countScore);
+
+    
 
     frame_end = SDL_GetTicks();
 

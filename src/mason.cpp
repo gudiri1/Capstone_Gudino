@@ -34,8 +34,10 @@ bool FlyingBlock::PropelBlock(Mason &mason, Wall &wall)
   for(std::vector<bool>::iterator i = wall.presence.begin(); i != wall.presence.end(); ++i)
     totalPresence += *i;
 
-  if (totalPresence == MAX_NUMBER_OF_BRICKS)
+  if (totalPresence == MAX_NUMBER_OF_BRICKS){
     wall.SetNewWall();
+    countScore++;
+  }
 
   _pos_y = _pos_y - 20;
 

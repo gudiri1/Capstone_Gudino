@@ -13,10 +13,14 @@
 class Game {
  public:
   Game(std::size_t grid_width, std::size_t grid_height);
+
   void Run(Controller const &controller, Renderer &renderer,
            std::size_t target_frame_duration);
+
   int GetScore() const;
 
+  bool ReadWall(std::vector<bool> v);
+  void SetScore(int s);
 
  private:
 
@@ -30,6 +34,8 @@ class Game {
   std::uniform_int_distribution<int> random_h;
 
   int score{0};
+
+  std::condition_variable _cond;
 
 };
 
