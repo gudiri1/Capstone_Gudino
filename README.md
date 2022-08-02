@@ -3,7 +3,7 @@
 ![image](https://user-images.githubusercontent.com/25869441/182407220-379487c5-1147-426b-8f17-bfd09aef7023.png)
 
 
-A mason has a build a wall by "shooting" flying blocks, which come to build a brick layer. This layer dissapears as soon as it is "full"
+A mason has to build a wall by "shooting" flying blocks, which come to build a brick layer. This layer dissapears as soon as it is "full"
 and a new randomly incomplete layer shows up to keep the mason busy. Every complete layer increases the score.
 
 
@@ -11,6 +11,15 @@ You can move the mason laterally using the numPad:
 4 and 6 respectively for left and right.
 When pressing 8 a block will fly and go to the
 Layer.
+
+Among the concepts applied are:
+The use of locks/mutex
+- For protecting the vector indicating the 
+Presence of blocks in the layer. 
+- Using threads for moving the mason and
+Propeling the flying block
+- inheritance
+- polymorphy
 
 
 
