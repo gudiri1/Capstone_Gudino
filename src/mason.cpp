@@ -5,7 +5,7 @@
 
 #define MAX_NUMBER_OF_BRICKS    20
 
-void Mason::Update(bool &DirFlag) 
+void Mason::Update() 
 {
 
   switch (this->state) {
@@ -20,13 +20,9 @@ void Mason::Update(bool &DirFlag)
       break;
 
     case GameObject::State::fire:
-       DirFlag = true;
        state = GameObject::State::idle;
       break;
   }
-
-  //std::future<bool> ftr = std::async(&FlyingBlock::PropelBlock, this->fblock);
-  //this->blockFlies = ftr.get();
 
 }
 
@@ -37,8 +33,6 @@ bool FlyingBlock::PropelBlock(Mason &mason, Wall &wall)
 
   for(std::vector<bool>::iterator i = wall.presence.begin(); i != wall.presence.end(); ++i)
     totalPresence += *i;
-
-  //std::cout << "propbel" << totalPresence << std::endl;
 
   if (totalPresence == MAX_NUMBER_OF_BRICKS)
     wall.SetNewWall();
@@ -53,8 +47,6 @@ bool FlyingBlock::PropelBlock(Mason &mason, Wall &wall)
   }
   
   std::this_thread::sleep_for(std::chrono::milliseconds(50));
-
-  std::cout << totalPresence << std::endl;
 
   totalPresence = 0;
 

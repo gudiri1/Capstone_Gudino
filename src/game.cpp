@@ -20,8 +20,6 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   int frame_count = 0;
   bool running = true;
 
-  bool DirFlag = false;
-
   mason.blockFlies = 0;
 
   while (running) {
@@ -30,7 +28,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, mason);
 
-    std::thread t2(&Mason::Update, &mason, std::ref(DirFlag));
+    std::thread t2(&Mason::Update, &mason);
 
     std::thread t3(&FlyingBlock::PropelBlock, &mason.fblock, std::ref(mason), std::ref(wall));
     
@@ -52,9 +50,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
       renderer.UpdateWindowTitle(score, frame_count);
       frame_count = 0;
       title_timestamp = frame_end;
-
-      //if (mason.body1_x >= 100) DirFlag = false;
-      
+     
     }
 
     // If the time for this frame is too small (i.e. frame_duration is
@@ -66,7 +62,4 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   }
 }
 
-
-
-int Game::GetScore() const { return 1; }
-int Game::GetSize() const { return 1; }
+int Game::GetScore() const { return score; }
