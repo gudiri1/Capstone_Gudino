@@ -20,6 +20,7 @@ Presence of blocks in the layer.
 Propeling the flying block
 - inheritance
 - polymorphy
+- memory management
 
 
 
