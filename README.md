@@ -3,18 +3,13 @@
 ![image](https://user-images.githubusercontent.com/25869441/182407220-379487c5-1147-426b-8f17-bfd09aef7023.png)
 
 
+A mason has a build a wall by "shooting" flying blocks, which come to build a brick layer. This layer dissapears as soon as it is "full"
+and a new randomly incomplete layer shows up to keep the mason busy. Every complete layer increases the score.
 
 
 
 
 
-
-
-
-
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
-
-In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
