@@ -12,6 +12,10 @@ You can move the mason laterally using the numPad:
 When pressing 8 a block will fly and go to the
 Layer.
 
+NOTE: if the mason seems not to move try
+locking/unlocking the NumPad by pressing
+the NmLk key on the keyboard.
+
 Among the concepts applied are:
 The use of locks/mutex
 - For protecting the vector indicating the 
