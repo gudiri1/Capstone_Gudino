@@ -5,28 +5,29 @@
 #include <future>
 
 
-Game::Game(std::size_t grid_width, std::size_t grid_height)
+Game::Game(std::size_t grid_width, std::size_t grid_height, std::shared_ptr<Mortar> mortar )
     : snake(grid_width, grid_height),
       engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)) {
   PlaceFood();
+  mortar->f1();
+  //mortar->var1 =1;
 }
 
 void Game::Run(Controller const &controller, Renderer &renderer,
-               std::size_t target_frame_duration) {
+               std::size_t target_frame_duration, std::shared_ptr<Mortar> mortar) {
   Uint32 title_timestamp = SDL_GetTicks();
   Uint32 frame_start;
   Uint32 frame_end;
   Uint32 frame_duration;
   int frame_count = 0;
   bool running = true;
-
   bool DirFlag = false;
 
   mason.blockFlies = 0;
 
-  //mason.SetState(moveToLeft);
+  //mortar->var1 = 2;
 
   while (running) {
     frame_start = SDL_GetTicks();
@@ -65,8 +66,6 @@ void Game::Run(Controller const &controller, Renderer &renderer,
       frame_count = 0;
       title_timestamp = frame_end;
 
-      //if (mason.body1_x >= 100) DirFlag = false;
-      
     }
 
     // If the time for this frame is too small (i.e. frame_duration is

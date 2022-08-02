@@ -1,12 +1,19 @@
 #ifndef MORTAR_H
 #define MORTAR_H
 
-class Mortar
+#include "GameObject.h"
+
+class Mortar : public GameObject
 {
 public:
 
-private:
 
+void f1();
+void f2();
+
+int var1;
+
+private:
 
 };
 

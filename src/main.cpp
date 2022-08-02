@@ -15,28 +15,19 @@ int main() {
   constexpr std::size_t kScreenHeight{640};
   constexpr std::size_t kGridWidth{32};
   constexpr std::size_t kGridHeight{32};
-
-  //threadFunction();
   
   Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
-
   Controller controller;
-  Game game(kGridWidth, kGridHeight);
 
-  FlyingBlock fBlock1;
+  std::shared_ptr<Mortar> mortar1 = std::make_shared<Mortar>();
 
-  fBlock1.~FlyingBlock();
+  Game game(kGridWidth, kGridHeight, mortar1);
 
-  game.Run(controller, renderer, kMsPerFrame);
-  //std::thread t(threadFunction, std::ref(renderer));
-
-  
-
+  game.Run(controller, renderer, kMsPerFrame, mortar1);
 
   std::cout << "Game has terminated successfully!\n";
   std::cout << "Score: " << game.GetScore() << "\n";
   std::cout << "Size: " << game.GetSize() << "\n";
-
  
   return 0;
 }

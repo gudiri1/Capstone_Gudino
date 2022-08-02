@@ -41,22 +41,15 @@ public:
   Mason() {
     _pos_x = 15 * 20; 
     _pos_y = 29 * 20;
+  }    
 
- }    
+  ~Mason(){};
 
-~Mason(){};
-
-bool blockFlies;
-
-
-void Update(bool &DirFlag);
-
-FlyingBlock fblock;
+  bool blockFlies;
+  void Update(bool &DirFlag);
+  FlyingBlock fblock;
 
 private:
-
-// std::future<bool> mftr;
-
 
 };
 

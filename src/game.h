@@ -9,14 +9,15 @@
 // #include "mason.h"
 #include <memory>
 #include "wall.h"
+#include "mortar.h"
 
 
 
 class Game {
  public:
-  Game(std::size_t grid_width, std::size_t grid_height);
+  Game(std::size_t grid_width, std::size_t grid_height, std::shared_ptr<Mortar> mortar);
   void Run(Controller const &controller, Renderer &renderer,
-           std::size_t target_frame_duration);
+           std::size_t target_frame_duration, std::shared_ptr<Mortar> mortar );
   int GetScore() const;
   int GetSize() const;
 
@@ -25,15 +26,10 @@ class Game {
  private:
   Snake snake;
   SDL_Point food;
-
   Mason mason;
-
   Wall wall;
 
-  //FlyingBlock fblock;
-
-    
-  //std::shared_ptr<Wall> wall = std::make_shared<Wall>();;
+  //std::shared_ptr<Mortar> mortar;
 
   SDL_Point stone;
 
