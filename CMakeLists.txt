@@ -19,6 +19,6 @@ find_package(Threads REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS} src)
 
 # add the executable
-add_executable(SnakeGame src/main.cpp src/GameObject src/game.cpp src/controller.cpp src/renderer.cpp src/mason.cpp src/wall.cpp)
+add_executable(MasonGame src/main.cpp src/GameObject src/game.cpp src/controller.cpp src/renderer.cpp src/mason.cpp src/wall.cpp)
 string(STRIP "${SDL2_LIBRARIES}" SDL2_LIBRARIES)
-target_link_libraries(SnakeGame ${SDL2_LIBRARIES} Threads::Threads)
+target_link_libraries(MasonGame ${SDL2_LIBRARIES} Threads::Threads)
