@@ -4,20 +4,24 @@
 #include "GameObject.h"
 #include <vector>
 #include "SDL.h"
+#include <mutex>
 
 class Wall : public GameObject
 {
 public:
 
     Wall(){
-        this->SetNewWall();
+        _mutex = new std::mutex();
     }
 
     void SetNewWall();
 
-    std::vector<bool> presence = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0};
+    std::vector<bool> presence; // = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0};
+
+    std::mutex *_mutex;
 
 private:
+    
  
 };
 
