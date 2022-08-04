@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/workspace/CppND-Capstone-Snake-Game
+CMAKE_SOURCE_DIR = /home/workspace/Mason-Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/workspace/CppND-Capstone-Snake-Game/build
+CMAKE_BINARY_DIR = /home/workspace/Mason-Game/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Capstone-Snake-Game/build/CMakeFiles /home/workspace/CppND-Capstone-Snake-Game/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Mason-Game/build/CMakeFiles /home/workspace/Mason-Game/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Capstone-Snake-Game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Mason-Game/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SnakeGame
+# Target rules for targets named MasonGame
 
 # Build rule for target.
-SnakeGame: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 SnakeGame
-.PHONY : SnakeGame
+MasonGame: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MasonGame
+.PHONY : MasonGame
 
 # fast build rule for target.
-SnakeGame/fast:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/build
-.PHONY : SnakeGame/fast
+MasonGame/fast:
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/build
+.PHONY : MasonGame/fast
 
 src/GameObject.o: src/GameObject.cpp.o
 
@@ -129,7 +129,7 @@ src/GameObject.o: src/GameObject.cpp.o
 
 # target to build an object file
 src/GameObject.cpp.o:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/GameObject.cpp.o
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/GameObject.cpp.o
 .PHONY : src/GameObject.cpp.o
 
 src/GameObject.i: src/GameObject.cpp.i
@@ -138,7 +138,7 @@ src/GameObject.i: src/GameObject.cpp.i
 
 # target to preprocess a source file
 src/GameObject.cpp.i:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/GameObject.cpp.i
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/GameObject.cpp.i
 .PHONY : src/GameObject.cpp.i
 
 src/GameObject.s: src/GameObject.cpp.s
@@ -147,7 +147,7 @@ src/GameObject.s: src/GameObject.cpp.s
 
 # target to generate assembly for a file
 src/GameObject.cpp.s:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/GameObject.cpp.s
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/GameObject.cpp.s
 .PHONY : src/GameObject.cpp.s
 
 src/controller.o: src/controller.cpp.o
@@ -156,7 +156,7 @@ src/controller.o: src/controller.cpp.o
 
 # target to build an object file
 src/controller.cpp.o:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/controller.cpp.o
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/controller.cpp.o
 .PHONY : src/controller.cpp.o
 
 src/controller.i: src/controller.cpp.i
@@ -165,7 +165,7 @@ src/controller.i: src/controller.cpp.i
 
 # target to preprocess a source file
 src/controller.cpp.i:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/controller.cpp.i
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/controller.cpp.i
 .PHONY : src/controller.cpp.i
 
 src/controller.s: src/controller.cpp.s
@@ -174,7 +174,7 @@ src/controller.s: src/controller.cpp.s
 
 # target to generate assembly for a file
 src/controller.cpp.s:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/controller.cpp.s
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/controller.cpp.s
 .PHONY : src/controller.cpp.s
 
 src/game.o: src/game.cpp.o
@@ -183,7 +183,7 @@ src/game.o: src/game.cpp.o
 
 # target to build an object file
 src/game.cpp.o:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/game.cpp.o
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/game.cpp.o
 .PHONY : src/game.cpp.o
 
 src/game.i: src/game.cpp.i
@@ -192,7 +192,7 @@ src/game.i: src/game.cpp.i
 
 # target to preprocess a source file
 src/game.cpp.i:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/game.cpp.i
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/game.cpp.i
 .PHONY : src/game.cpp.i
 
 src/game.s: src/game.cpp.s
@@ -201,7 +201,7 @@ src/game.s: src/game.cpp.s
 
 # target to generate assembly for a file
 src/game.cpp.s:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/game.cpp.s
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -210,7 +210,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -219,7 +219,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -228,7 +228,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/mason.o: src/mason.cpp.o
@@ -237,7 +237,7 @@ src/mason.o: src/mason.cpp.o
 
 # target to build an object file
 src/mason.cpp.o:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mason.cpp.o
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/mason.cpp.o
 .PHONY : src/mason.cpp.o
 
 src/mason.i: src/mason.cpp.i
@@ -246,7 +246,7 @@ src/mason.i: src/mason.cpp.i
 
 # target to preprocess a source file
 src/mason.cpp.i:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mason.cpp.i
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/mason.cpp.i
 .PHONY : src/mason.cpp.i
 
 src/mason.s: src/mason.cpp.s
@@ -255,35 +255,8 @@ src/mason.s: src/mason.cpp.s
 
 # target to generate assembly for a file
 src/mason.cpp.s:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mason.cpp.s
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/mason.cpp.s
 .PHONY : src/mason.cpp.s
-
-src/mortar.o: src/mortar.cpp.o
-
-.PHONY : src/mortar.o
-
-# target to build an object file
-src/mortar.cpp.o:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mortar.cpp.o
-.PHONY : src/mortar.cpp.o
-
-src/mortar.i: src/mortar.cpp.i
-
-.PHONY : src/mortar.i
-
-# target to preprocess a source file
-src/mortar.cpp.i:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mortar.cpp.i
-.PHONY : src/mortar.cpp.i
-
-src/mortar.s: src/mortar.cpp.s
-
-.PHONY : src/mortar.s
-
-# target to generate assembly for a file
-src/mortar.cpp.s:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/mortar.cpp.s
-.PHONY : src/mortar.cpp.s
 
 src/renderer.o: src/renderer.cpp.o
 
@@ -291,7 +264,7 @@ src/renderer.o: src/renderer.cpp.o
 
 # target to build an object file
 src/renderer.cpp.o:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/renderer.cpp.o
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/renderer.cpp.o
 .PHONY : src/renderer.cpp.o
 
 src/renderer.i: src/renderer.cpp.i
@@ -300,7 +273,7 @@ src/renderer.i: src/renderer.cpp.i
 
 # target to preprocess a source file
 src/renderer.cpp.i:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/renderer.cpp.i
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/renderer.cpp.i
 .PHONY : src/renderer.cpp.i
 
 src/renderer.s: src/renderer.cpp.s
@@ -309,35 +282,8 @@ src/renderer.s: src/renderer.cpp.s
 
 # target to generate assembly for a file
 src/renderer.cpp.s:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/renderer.cpp.s
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/renderer.cpp.s
 .PHONY : src/renderer.cpp.s
-
-src/snake.o: src/snake.cpp.o
-
-.PHONY : src/snake.o
-
-# target to build an object file
-src/snake.cpp.o:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/snake.cpp.o
-.PHONY : src/snake.cpp.o
-
-src/snake.i: src/snake.cpp.i
-
-.PHONY : src/snake.i
-
-# target to preprocess a source file
-src/snake.cpp.i:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/snake.cpp.i
-.PHONY : src/snake.cpp.i
-
-src/snake.s: src/snake.cpp.s
-
-.PHONY : src/snake.s
-
-# target to generate assembly for a file
-src/snake.cpp.s:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/snake.cpp.s
-.PHONY : src/snake.cpp.s
 
 src/wall.o: src/wall.cpp.o
 
@@ -345,7 +291,7 @@ src/wall.o: src/wall.cpp.o
 
 # target to build an object file
 src/wall.cpp.o:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/wall.cpp.o
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/wall.cpp.o
 .PHONY : src/wall.cpp.o
 
 src/wall.i: src/wall.cpp.i
@@ -354,7 +300,7 @@ src/wall.i: src/wall.cpp.i
 
 # target to preprocess a source file
 src/wall.cpp.i:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/wall.cpp.i
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/wall.cpp.i
 .PHONY : src/wall.cpp.i
 
 src/wall.s: src/wall.cpp.s
@@ -363,7 +309,7 @@ src/wall.s: src/wall.cpp.s
 
 # target to generate assembly for a file
 src/wall.cpp.s:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/wall.cpp.s
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/src/wall.cpp.s
 .PHONY : src/wall.cpp.s
 
 # Help Target
@@ -373,7 +319,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... SnakeGame"
+	@echo "... MasonGame"
 	@echo "... edit_cache"
 	@echo "... src/GameObject.o"
 	@echo "... src/GameObject.i"
@@ -390,15 +336,9 @@ help:
 	@echo "... src/mason.o"
 	@echo "... src/mason.i"
 	@echo "... src/mason.s"
-	@echo "... src/mortar.o"
-	@echo "... src/mortar.i"
-	@echo "... src/mortar.s"
 	@echo "... src/renderer.o"
 	@echo "... src/renderer.i"
 	@echo "... src/renderer.s"
-	@echo "... src/snake.o"
-	@echo "... src/snake.i"
-	@echo "... src/snake.s"
 	@echo "... src/wall.o"
 	@echo "... src/wall.i"
 	@echo "... src/wall.s"
