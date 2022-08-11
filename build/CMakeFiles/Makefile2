@@ -59,45 +59,45 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/workspace/CppND-Capstone-Snake-Game
+CMAKE_SOURCE_DIR = /home/workspace/Mason-Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/workspace/CppND-Capstone-Snake-Game/build
+CMAKE_BINARY_DIR = /home/workspace/Mason-Game/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/SnakeGame.dir
+# Target rules for target CMakeFiles/MasonGame.dir
 
 # All Build rule for target.
-CMakeFiles/SnakeGame.dir/all:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/depend
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/CppND-Capstone-Snake-Game/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target SnakeGame"
-.PHONY : CMakeFiles/SnakeGame.dir/all
+CMakeFiles/MasonGame.dir/all:
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/depend
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/Mason-Game/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target MasonGame"
+.PHONY : CMakeFiles/MasonGame.dir/all
 
 # Include target in all.
-all: CMakeFiles/SnakeGame.dir/all
+all: CMakeFiles/MasonGame.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SnakeGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Capstone-Snake-Game/build/CMakeFiles 10
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SnakeGame.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Capstone-Snake-Game/build/CMakeFiles 0
-.PHONY : CMakeFiles/SnakeGame.dir/rule
+CMakeFiles/MasonGame.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Mason-Game/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MasonGame.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Mason-Game/build/CMakeFiles 0
+.PHONY : CMakeFiles/MasonGame.dir/rule
 
 # Convenience name for target.
-SnakeGame: CMakeFiles/SnakeGame.dir/rule
+MasonGame: CMakeFiles/MasonGame.dir/rule
 
-.PHONY : SnakeGame
-
-# clean rule for target.
-CMakeFiles/SnakeGame.dir/clean:
-	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/clean
-.PHONY : CMakeFiles/SnakeGame.dir/clean
+.PHONY : MasonGame
 
 # clean rule for target.
-clean: CMakeFiles/SnakeGame.dir/clean
+CMakeFiles/MasonGame.dir/clean:
+	$(MAKE) -f CMakeFiles/MasonGame.dir/build.make CMakeFiles/MasonGame.dir/clean
+.PHONY : CMakeFiles/MasonGame.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/MasonGame.dir/clean
 
 .PHONY : clean
 

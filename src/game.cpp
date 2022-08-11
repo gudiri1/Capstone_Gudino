@@ -5,16 +5,7 @@
 #include <future>
 #include <algorithm>
 
-
-Game::Game(std::size_t grid_width, std::size_t grid_height)
-    : engine(dev()),
-      random_w(0, static_cast<int>(grid_width - 1)),
-      random_h(0, static_cast<int>(grid_height - 1)) {
-}
-
-bool Game::ReadWall(std::vector<bool> v){
-  return (std::count(v.begin(), v.end(), 0));
-}
+int Game::GetScore() const { return score; }
 
 void Game::SetScore(int s){
   score = s;
@@ -28,10 +19,9 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   Uint32 frame_duration;
   int frame_count = 0;
   bool running = true;
-  wall.presence = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0};
+  wall.presence = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
   wall.SetNewWall();
   
-
   mason.blockFlies = 0;
 
   while (running) {
@@ -44,17 +34,12 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 
     std::thread t3(&FlyingBlock::PropelBlock, &mason.fblock, std::ref(mason), std::ref(wall));
     
-    bool a = ReadWall(wall.presence);
-    
     renderer.Render(mason, wall);
     
-
     t2.join();
     t3.join();
 
     SetScore(mason.fblock.countScore);
-
-    
 
     frame_end = SDL_GetTicks();
 
@@ -81,4 +66,4 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   }
 }
 
-int Game::GetScore() const { return score; }
+

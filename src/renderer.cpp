@@ -60,8 +60,6 @@ void Renderer::Render(Mason mason, Wall wall) {
   SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x00, 0xCC, 0xFF);
   block.x = mason.fblock.GetPos_x();
   block.y = mason.fblock.GetPos_y();
-
-  //std::cout << mason.fblock.GetPos_x() << " " << mason.fblock.GetPos_y() << std::endl;
   SDL_RenderFillRect(sdl_renderer, &block);
   }
 
@@ -75,11 +73,9 @@ void Renderer::Render(Mason mason, Wall wall) {
       block.y = y_pos;
       SDL_RenderFillRect(sdl_renderer, &block);
     }
-  x_pos += 20;
-      
+    x_pos += 20;
   }
   
-
   // Update Screen
   SDL_RenderPresent(sdl_renderer);
 }

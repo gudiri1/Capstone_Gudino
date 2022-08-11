@@ -12,24 +12,14 @@ class FlyingBlock : public GameObject
 {
 public:
 
-  FlyingBlock() {
-
-  }    
-
-  ~FlyingBlock(){};
-
-
   int initPos_x;
   int initPos_y;
-
 
   bool PropelBlock(Mason &mason, Wall &wall);
 
   int countScore{0};
 
 private:
-
- 
 
 };
 
@@ -43,8 +33,6 @@ public:
     _pos_y = 29 * 20;
 
   }    
-
-  //~Mason(){};
 
   bool blockFlies;
 

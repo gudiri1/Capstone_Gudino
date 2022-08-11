@@ -10,19 +10,12 @@ class Wall : public GameObject
 {
 public:
 
-    Wall(){
-        _mutex = new std::mutex();
-    }
-
     void SetNewWall();
 
-    std::vector<bool> presence; // = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0};
-
-    std::mutex *_mutex;
+    std::vector<bool> presence; 
 
 private:
-    
- 
+
 };
 
 

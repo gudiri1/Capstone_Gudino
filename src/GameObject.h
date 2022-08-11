@@ -21,8 +21,6 @@ public:
   
   State state {State::idle};
 
-  /*virtual*/ void Update ();
-
 protected:
   int _pos_x{0};
   int _pos_y{0};
