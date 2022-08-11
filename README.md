@@ -29,10 +29,12 @@ the NmLk key on the keyboard.
 
 The project chosen is a game based on the SnakeGame. Instead of the Snake object two new objects are now created inside the Game object: Wall and Mason, which in turn contains the object FlyingBlock.
 The main creates the three main objects and then calls the Game::Run for the loop.
-//.jpg
+
+![BlockDiag](https://user-images.githubusercontent.com/25869441/184115676-4e76f00d-9dfb-4eb6-a096-b3bf44d3828c.png)
+
 The class GameObject is defined as the base class for mason and wall.
 In this way, the common properties and methods like position and state are grouped.
-//.jpg
+
 Mason:
 When the mason is created its position is set around the middle at the bottom of the screen.
 The bool variable blockFlies is used to indicates when the block "fired" by the mason starts to fly and at the end comes to the wall.
@@ -59,11 +61,13 @@ The controller makes available the function HandleInput, which now receives the 
 
 
 * Information about the addressed rubric points:
+
 - switch case, for and while loops have been used.
 - The classes mason, flyingBlock and wall include functions, which group the sequences of tasks steps related to the respective object.
 - Inheritance is implemented through the class GameObject.
 - Use of references inside thread functions: game.cp::33
 - The project uses multiple threads inside the function Game::Run
+
 
 
 
